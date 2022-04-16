@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/static/output.css" />
+    <title>Hacker News</title>
+  </head>
+  <body class="w-full bg-black font-mono">
+    <main class="flex w-full flex-col items-center bg-black">
+      <header
+        class="w-full border-b-2 border-green-600 text-gray-800 shadow-md"
+      >
+        <div
+          class="container mx-auto flex flex-col flex-wrap items-center py-2 md:flex-row"
+        >
+          <nav>
+            <a href="#" class="font-mono text-2xl text-green-600"
+              >Hacker News</a
+            >
+          </nav>
+        </div>
+      </header>
+      <article class="flex w-full flex-col items-center bg-black px-4">
+        {% for item in context %}
+        <section
+          class="mx-2 my-2 box-border flex w-full flex-row items-center rounded-lg border-2 border-green-600 px-4 py-2 shadow-md shadow-green-700"
+        >
+          <h5 class="text-xl font-bold text-green-600">
+            {{ item.serial_number }}
+          </h5>
+          <div class="mx-4 flex flex-col flex-wrap">
+            <a href="{{ item.URL }}" class="text-lg font-bold text-green-600"
+              >{{ item.title }}</a
+            >
+            <p class="text-base">
+              <a
+                href="{{ item.user.URL }}"
+                class="font-mono text-green-600 underline"
+                >{{ item.user.ID }}</a
+              >
+            </p>
+          </div>
+        </section>
+        {% endfor %}
+      </article>
+      <footer
+        class="w-full text-sm border-t-2 border-green-600 text-green-600 flex flex-col flex-wrap items-center font-mono"
+      >
+        built by <a href="https://github.com/HarshitDoshi" class="font-bold">Harshit Doshi</a>
+      </footer>
+    </main>
+  </body>
+</html>

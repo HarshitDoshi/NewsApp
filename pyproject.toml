@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "NewsApp"
+version = "0.0.1"
+description = ""
+authors = ["HarshitDoshi <5103046+HarshitDoshi@users.noreply.github.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+beautifulsoup4 = "^4.11.1"
+aiohttp = "^3.8.1"
+cchardet = "^2.1.7"
+aiodns = "^3.0.0"
+aiohttp-jinja2 = "^1.5"
+html5lib = "^1.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
