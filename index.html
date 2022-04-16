@@ -11,12 +11,10 @@
       <header
         class="w-full border-b-2 border-green-600 text-gray-800 shadow-md"
       >
-        <div
-          class="container mx-auto flex flex-col flex-wrap items-center py-2 md:flex-row"
-        >
+        <div class="mx-auto py-2 px-4 flex flex-col flex-wrap items-center">
           <nav>
             <a href="#" class="font-mono text-2xl text-green-600"
-              >Hacker News</a
+              >HACKER_NEWS<span class="text-sm align-super">:{{ resource }}:{{ page_number }}</span></a
             >
           </nav>
         </div>
@@ -45,9 +43,12 @@
         {% endfor %}
       </article>
       <footer
-        class="w-full text-sm border-t-2 border-green-600 text-green-600 flex flex-col flex-wrap items-center font-mono"
+        class="w-full text-md border-t-2 border-green-600 text-green-600 flex flex-col flex-wrap items-center font-mono"
       >
-        built by <a href="https://github.com/HarshitDoshi" class="font-bold">Harshit Doshi</a>
+        built by
+        <a href="https://github.com/HarshitDoshi" class="font-bold"
+          >Harshit Doshi</a
+        >
       </footer>
     </main>
   </body>

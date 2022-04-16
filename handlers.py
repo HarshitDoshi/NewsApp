@@ -96,9 +96,8 @@ async def get_hacker_news(request: web.Request):
                 "user": user,
             }
             posts.append(_post_object)
-    context = {"context": posts}  # json.dumps(posts)
+    context = {"context": posts, "resource": _resource, "page_number": _page}
     response = await render_template_async(
         "index.html", request=request, context=context
     )
     return response
-    # return web.Response(body=response, content_type="application/json")
