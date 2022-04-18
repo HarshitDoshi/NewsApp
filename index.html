@@ -14,7 +14,9 @@
         <div class="mx-auto py-2 px-4 flex flex-col flex-wrap items-center">
           <nav>
             <a href="#" class="font-mono text-2xl text-green-600"
-              >HACKER_NEWS<span class="text-sm align-super">:{{ resource }}:{{ page_number }}</span></a
+              >HACKER_NEWS<span class="text-sm align-super"
+                >:{{ resource }}:{{ page_number }}</span
+              ></a
             >
           </nav>
         </div>
@@ -22,7 +24,7 @@
       <article class="flex w-full flex-col items-center bg-black px-4">
         {% for item in context %}
         <section
-          class="mx-2 my-2 box-border flex w-full flex-row items-center rounded-lg border-2 border-green-600 px-4 py-2 shadow-md shadow-green-700"
+          class="mx-2 my-2 box-border flex w-full flex-row items-center border-2 border-green-600 px-4 py-2 shadow-md shadow-green-700"
         >
           <h5 class="text-xl font-bold text-green-600">
             {{ item.serial_number }}
@@ -31,10 +33,11 @@
             <a href="{{ item.URL }}" class="text-lg font-bold text-green-600"
               >{{ item.title }}</a
             >
-            <p class="text-base">
-              <a
-                href="{{ item.user.URL }}"
-                class="font-mono text-green-600 underline"
+            <p class="text-base text-green-600">
+              <a href="{{ item.user.URL }}" class="border-2 border-green-600"
+                >{{ item.user.ID }}</a
+              >
+              <a href="{{ item.user.URL }}" class="border-2 border-green-600"
                 >{{ item.user.ID }}</a
               >
             </p>
