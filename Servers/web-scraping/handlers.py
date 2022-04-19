@@ -98,6 +98,6 @@ async def get_hacker_news(request: web.Request):
             posts.append(_post_object)
     context = {"context": posts, "resource": _resource, "page_number": _page}
     response = await render_template_async(
-        "index.html", request=request, context=context
+        "../../Clientsindex.html", request=request, context=context
     )
     return response
