@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "outDir": "./distribution",
+    "strict": true,
+    "esModuleInterop": true,
+    "inlineSourceMap": true
+  }
+}
